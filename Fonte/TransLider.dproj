@@ -1,0 +1,253 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{F2D1B55C-D0D1-47ED-987F-153443966CD3}</ProjectGuid>
+			<ProjectVersion>12.0</ProjectVersion>
+			<MainSource>TransLider.dpr</MainSource>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+			<DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<DCC_DependencyCheckOutputName>TransLider.exe</DCC_DependencyCheckOutputName>
+			<DCC_ImageBase>00400000</DCC_ImageBase>
+			<DCC_UnitAlias>WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;$(DCC_UnitAlias)</DCC_UnitAlias>
+			<DCC_Platform>x86</DCC_Platform>
+			<DCC_E>false</DCC_E>
+			<DCC_N>false</DCC_N>
+			<DCC_S>false</DCC_S>
+			<DCC_F>false</DCC_F>
+			<DCC_K>false</DCC_K>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+			<DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+			<DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+			<DCC_DebugInformation>false</DCC_DebugInformation>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+		</PropertyGroup>
+		<ItemGroup>
+			<DelphiCompile Include="TransLider.dpr">
+				<MainSource>MainSource</MainSource>
+			</DelphiCompile>
+			<DCCReference Include="UPrincipal.pas">
+				<Form>FPrincipal</Form>
+			</DCCReference>
+			<DCCReference Include="UDmFire.pas">
+				<Form>DmFire</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="UCadMarcas.pas">
+				<Form>FCadMarcas</Form>
+			</DCCReference>
+			<DCCReference Include="UCadModelos.pas">
+				<Form>FCadModelos</Form>
+			</DCCReference>
+			<DCCReference Include="UCadMotoristas.pas">
+				<Form>FCadMotoristas</Form>
+			</DCCReference>
+			<DCCReference Include="UConsMotorista.pas">
+				<Form>FConsMotorista</Form>
+			</DCCReference>
+			<DCCReference Include="UCadFornecedor.pas">
+				<Form>FCadFornecedor</Form>
+			</DCCReference>
+			<DCCReference Include="UConsFornecedor.pas">
+				<Form>FConsFornecedor</Form>
+			</DCCReference>
+			<DCCReference Include="UCadVeiculo.pas">
+				<Form>FCadVeiculo</Form>
+			</DCCReference>
+			<DCCReference Include="UConsCavalo.pas">
+				<Form>FConsCavalo</Form>
+			</DCCReference>
+			<DCCReference Include="UTirarFotoAluno.pas">
+				<Form>FTirarFotoAluno</Form>
+			</DCCReference>
+			<DCCReference Include="UConsVeiculo.pas">
+				<Form>FConsVeiculo</Form>
+			</DCCReference>
+			<DCCReference Include="UCadServico.pas">
+				<Form>FCadServico</Form>
+			</DCCReference>
+			<DCCReference Include="UConsServico.pas">
+				<Form>FConsServico</Form>
+			</DCCReference>
+			<DCCReference Include="ULancaManutencao.pas">
+				<Form>FLancaManutencao</Form>
+			</DCCReference>
+			<DCCReference Include="UConsServicoLancaManut.pas">
+				<Form>FConsServicoLancaManut</Form>
+			</DCCReference>
+			<DCCReference Include="URelacaoManutencoes.pas">
+				<Form>FRelacaoManutencoes</Form>
+			</DCCReference>
+			<DCCReference Include="UAlteraOrdemServico.pas">
+				<Form>FAlteraOrdemServico</Form>
+			</DCCReference>
+			<DCCReference Include="UEntradaSaidaVeiculos.pas">
+				<Form>FEntradaSaidaVeiculos</Form>
+			</DCCReference>
+			<DCCReference Include="UAbastecimento_Viagem.pas">
+				<Form>FAbastecimento_Viagem</Form>
+			</DCCReference>
+			<DCCReference Include="URelacaoEntrada_Saida.pas">
+				<Form>FRelacaoEntrada_Saida</Form>
+			</DCCReference>
+			<DCCReference Include="UAlteraEntrada_Saida.pas">
+				<Form>FAlteraEntrada_Saida</Form>
+			</DCCReference>
+			<DCCReference Include="URelacaoManutencoesPeriodicas.pas">
+				<Form>FRelacaoManutencoesPeriodicas</Form>
+			</DCCReference>
+			<DCCReference Include="UInfracoesCad.pas">
+				<Form>FInfracoesCad</Form>
+			</DCCReference>
+			<DCCReference Include="UConsInfracoes.pas">
+				<Form>FConsInfracoes</Form>
+			</DCCReference>
+			<DCCReference Include="UInfracoesMov.pas">
+				<Form>FInfracoesMov</Form>
+			</DCCReference>
+			<DCCReference Include="UConsInfracoesMov.pas">
+				<Form>FConsInfracoesMov</Form>
+			</DCCReference>
+			<DCCReference Include="UInfracoesIdentificar.pas">
+				<Form>FInfracoesIdentificar</Form>
+			</DCCReference>
+			<DCCReference Include="UVencimentoCNH.pas">
+				<Form>FVencimentoCNH</Form>
+			</DCCReference>
+			<DCCReference Include="UResumoGeral.pas">
+				<Form>FResumoGeral</Form>
+			</DCCReference>
+			<DCCReference Include="UCadUsuarios.pas">
+				<Form>FCadUsuarios</Form>
+			</DCCReference>
+			<DCCReference Include="ULogin.pas">
+				<Form>FLogin</Form>
+			</DCCReference>
+			<DCCReference Include="UVeiculosMonitorar.pas">
+				<Form>FVeiculosMonitorar</Form>
+			</DCCReference>
+			<DCCReference Include="ULogMonitoramentoVeiculos.pas">
+				<Form>FLogMonitoramentoVeiculos</Form>
+			</DCCReference>
+			<DCCReference Include="UTanqueCombustivel.pas">
+				<Form>FTanqueCombustivel</Form>
+			</DCCReference>
+			<DCCReference Include="UEntradaVeicObsMot.pas">
+				<Form>FEntradaVeicObsMot</Form>
+			</DCCReference>
+			<DCCReference Include="UDespesasViagem.pas">
+				<Form>FDespesasViagem</Form>
+			</DCCReference>
+			<DCCReference Include="EditTunning.pas"/>
+			<DCCReference Include="UCustoAdicionalKm.pas">
+				<Form>FCustoAdicionalKm</Form>
+			</DCCReference>
+			<DCCReference Include="UCustoKm.pas">
+				<Form>FCustoKm</Form>
+			</DCCReference>
+			<DCCReference Include="URelacaoComissoes.pas">
+				<Form>FRelacaoComissoes</Form>
+			</DCCReference>
+			<DCCReference Include="UDmOra.pas">
+				<Form>DmOra</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="UCargasComissao.pas">
+				<Form>FCargasComissao</Form>
+			</DCCReference>
+			<DCCReference Include="URelacaoCargas.pas">
+				<Form>FRelacaoCargas</Form>
+			</DCCReference>
+			<DCCReference Include="UCadCargas.pas">
+				<Form>FCadCargas</Form>
+			</DCCReference>
+			<DCCReference Include="UValidaChave.pas">
+				<Form>FValidaChave</Form>
+			</DCCReference>
+			<DCCReference Include="UComissaoPorFrete.pas">
+				<Form>FComissaoPorFrete</Form>
+			</DCCReference>
+			<DCCReference Include="UDiasTrabalhados.pas">
+				<Form>FDiasTrabalhados</Form>
+			</DCCReference>
+			<DCCReference Include="ULancarHoras_Trab.pas">
+				<Form>FLancarHoras_Trab</Form>
+			</DCCReference>
+			<DCCReference Include="UDiasTrabPorHora.pas">
+				<Form>x</Form>
+			</DCCReference>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+		<ProjectExtensions>
+			<Borland.Personality>Delphi.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Delphi.Personality>
+					<Source>
+						<Source Name="MainSource">TransLider.dpr</Source>
+					</Source>
+					<Parameters>
+						<Parameters Name="UseLauncher">False</Parameters>
+						<Parameters Name="LoadAllSymbols">True</Parameters>
+						<Parameters Name="LoadUnspecifiedSymbols">False</Parameters>
+					</Parameters>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">True</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">False</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">0</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">3</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">1046</VersionInfo>
+						<VersionInfo Name="CodePage">1252</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName"/>
+						<VersionInfoKeys Name="FileDescription"/>
+						<VersionInfoKeys Name="FileVersion">1.0.0.3</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName"/>
+						<VersionInfoKeys Name="LegalCopyright"/>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename"/>
+						<VersionInfoKeys Name="ProductName"/>
+						<VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments"/>
+					</VersionInfoKeys>
+				</Delphi.Personality>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+	</Project>
